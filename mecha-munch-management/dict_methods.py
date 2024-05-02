@@ -76,5 +76,8 @@ def update_store_inventory(fulfillment_cart, store_inventory):
     :return: dict - store_inventory updated.
     """
     for k, v in store_inventory.items():
-        
+        if k in fulfillment_cart.keys():
+            v[0] -= fulfillment_cart[k][0]
+            if v[0] == 0:
+                v[0] = 'Out of Stock'
     return store_inventory
