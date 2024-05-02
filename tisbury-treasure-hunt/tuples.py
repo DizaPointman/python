@@ -57,5 +57,5 @@ def clean_up(combined_record_group):
     
     res = ""
     for cr in combined_record_group:
-        res + f"('{cr[0]}', '{cr[2]}', {cr[3]}, '{cr[4]}')" + "\n"
+        res += f"('{cr[0]}', '{cr[2]}', {cr[3]}, '{cr[4]}')\n"
     return res
